@@ -1,6 +1,8 @@
 # Image-Warp-PyTorch
 This is a customized PyTorch operation for replacement of nn.functional.grid_sample(). Warping (a.k.a. reprojecting) is an essential step in Temporal Anti-aliasing, Real-time Path Tracing Denoising, etc. It can morph the image according to the motion vectors (a.k.a. optical flows) to align it with another image.
 
+<img src="README/Image_warp.svg">
+
 ## Usage
 > image_warp.apply(*image, motion_vector*)
 
