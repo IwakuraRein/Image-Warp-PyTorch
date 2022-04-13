@@ -21,7 +21,7 @@ Letting ***I<sub>src</sub>*** denote ***image_src***, ***I<sub>dst</sub>*** deno
 bash ./install_kernel_filter.sh
 ```
 
-## Difference between torch.nn.functional.grid_sample()
+## Difference from torch.nn.functional.grid_sample()
 The input ***motion_vector*** stores coordinates in a relative manner. E.g., a motion vector of [-5, 8] will fill the *I<sub>dst</sub>(x, y)* with the value of *I<sub>src</sub>(x-5, y+8)*. On the other hand, the input ***grid*** of [torch.nn.functional.grid_sample()](https://pytorch.org/docs/1.11/generated/torch.nn.functional.grid_sample.html?highlight=grid_sample#torch.nn.functional.grid_sample) stores coordinates in an absolute manner. 
 
 The inference speed is faster than torch.nn.functional.grid_sample().
