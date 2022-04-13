@@ -24,4 +24,4 @@ bash ./install_kernel_filter.sh
 ## Difference between torch.nn.functional.grid_sample()
 The input ***motion_vector*** stores coordinates in a relative manner. E.g., a motion vector of (-5, 8) will move the pixel at (x, y) to the new location at (x-5, y+8). On the other hand, the input ***grid*** of [torch.nn.functional.grid_sample()](https://pytorch.org/docs/1.11/generated/torch.nn.functional.grid_sample.html?highlight=grid_sample#torch.nn.functional.grid_sample) stores coordinates in an absolute manner. 
 
-The inference speed is a bit faster than torch.nn.functional.grid_sample().
+The inference speed is faster than torch.nn.functional.grid_sample().
