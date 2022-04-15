@@ -14,7 +14,7 @@ Warp the ***image_src*** and blend it with the ***image_dst***. The ***motion_ve
 
 Letting ***I<sub>src</sub>*** denote ***image_src***, ***I<sub>dst</sub>*** denote ***image_dst***, ***α*** denote ***alpha***, **v** denote ***motion_vector***, and ***I<sub>out</sub>*** denote returning value, this function can be defined as:
 
-<img src="http://latex.codecogs.com/svg.latex?I_{out}=\begin{cases}\mathrm{Warp}(I_{src},\mathbf{v})\cdot\alpha + I_{dst} \cdot (1-\alpha) & \text{if\;}\mathbf{v}\text{\;is\;valid} \\I_{src} & \text{otherwise}\end{cases}">
+<img src="http://latex.codecogs.com/svg.latex?I_{out}=\begin{cases}\mathrm{Warp}(I_{src},\mathbf{v})\cdot\alpha + I_{dst} \cdot (1-\alpha) & \text{if\;}\mathbf{v}\text{\;is\;valid} \\I_{dst} & \text{otherwise}\end{cases}">
 
 ## Compile
 ```bash
