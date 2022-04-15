@@ -8,13 +8,13 @@ This is a customized PyTorch operation for replacement of nn.functional.grid_sam
 
 Warp the input ***image*** with size {*N, C, H, W*} according to the ***motion vector*** with size {*N, H, W, 2*}. 
 
-> image_warp_accum.apply(*image_src, image_dst, motion_vector, alpha*)
+> image_warp_accum.apply(*image_src, image_dst, motion_vector, alpha=0.5*)
 
 Warp the ***image_src*** and blend it with the ***image_dst***. The ***motion_vector*** maps the target image to the source image.
 
-Letting ***I<sub>src</sub>*** denote ***image_src***, ***I<sub>dst</sub>*** denote ***image_dst***, ***α*** denote ***alpha***, **V** denote ***motion_vector***, and ***I<sub>out</sub>*** denote returning value, this function can be defined as:
+Letting ***I<sub>src</sub>*** denote ***image_src***, ***I<sub>dst</sub>*** denote ***image_dst***, ***α*** denote ***alpha***, **v** denote ***motion_vector***, and ***I<sub>out</sub>*** denote returning value, this function can be defined as:
 
-<img src="http://latex.codecogs.com/svg.latex?I_{out}=\mathrm{Warp}(I_{src},\mathbf{v})\cdot\alpha + I_{dst} \cdot (1-\alpha)">
+<img src="http://latex.codecogs.com/svg.latex?I_{out}=\begin{cases}\mathrm{Warp}(I_{src},\mathbf{v})\cdot\alpha + I_{dst} \cdot (1-\alpha) & \text{if\;}\mathbf{v}\text{\;is\;valid} \\I_{src} & \text{otherwise}\end{cases}">
 
 ## Compile
 ```bash
